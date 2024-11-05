@@ -1,0 +1,38 @@
+/* Basic styling for the create post button */
+        .create-post-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 20px 0;
+            background-color: #007BFF; /* Bootstrap primary color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .create-post-button:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+
+        .posts-container {
+            margin: 20px;
+        }
+
+        .post {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+
+        .post h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .post p {
+            margin: 5px 0;
+        }
+
+        .post small {
+            color: #888;
+        }

@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: white;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.left-side {
+    grid-column: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.right-side {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+.right-side img {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+input {
+    display: block;
+    margin: 10px 0px;
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#submit {
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+#title {
+    text-align: center;
+}
+
+p, a {
+    display: inline;
+    color: black;
+    text-align: center;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+    .right-side {
+        display: none; /* Hide image on small screens if necessary */
+    }
+}
