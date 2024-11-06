@@ -45,6 +45,7 @@ img {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
+
 /* Child Element Styles */
 .div1 {
     grid-area: 1 / 1 / 2 / 2;
@@ -191,4 +192,31 @@ img {
 
 .separator {
     margin: 0 5px; /* Space between the date and post time */
+}
+
+.blogs {
+    padding: 20px;
+    color: black;
+}
+
+.blogs a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px;
+    background-color: #eee;
+}
+
+.blogs a:hover {
+    background-color: transparent;
+}
+
+.blog-cards {
+    margin : 50px auto;
+}
+
+.blog-card img {
+    border-radius: 8px;
+    max-width: 350px;
 }
