@@ -37,7 +37,7 @@ public class HomepageServlet extends HttpServlet
             request.setAttribute("posts", postlist); 
            
             // Forward Request To JSP
-            request.getRequestDispatcher("home.jsp").forward(request, response);
+            request.getRequestDispatcher("index.jsp").forward(request, response);
         } 
         catch (SQLException e) 
         {
