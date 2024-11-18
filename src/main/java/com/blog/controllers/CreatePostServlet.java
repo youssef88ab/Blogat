@@ -43,7 +43,7 @@ public class CreatePostServlet extends HttpServlet
         Timestamp currentTimestamp = new Timestamp(System.currentTimeMillis());
         
         // Create a new Post object
-        Post post = new Post(0, title, content, authorId, currentTimestamp);
+        Post post = new Post(0, title, content, authorId, currentTimestamp , "" , "");
         
         try {
             Database.createPost(post); // Ensure your method name is correct

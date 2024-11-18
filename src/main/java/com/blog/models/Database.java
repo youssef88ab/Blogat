@@ -15,16 +15,21 @@ public class Database {
     private static final String dbpassword = "youssef3334AB";
 
     // Load the driver once
-    static {
-        try {
+    static 
+    {
+        try 
+        {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             System.out.println("Oracle JDBC Driver Registered!");
-        } catch (ClassNotFoundException e) {
+        } 
+        
+        catch (ClassNotFoundException e) {
             System.out.println("Error loading Oracle JDBC Driver: " + e.getMessage());
         }
     }
 
-    public static Connection getConnection() throws SQLException {
+    public static Connection getConnection() throws SQLException 
+    {
         return DriverManager.getConnection(url, dbusername, dbpassword);
     }
 
@@ -111,9 +116,11 @@ public class Database {
                 String title = rs.getString("TITLE");
                 String content = rs.getString("CONTENT");
                 int author = rs.getInt("USER_ID");
+                String shortDescription = rs.getString("SHORTDESCRIPTION");
                 java.sql.Timestamp timestamp = rs.getTimestamp("CREATED_AT");
+                String categorie = rs.getString("CATEGORIE");
 
-                Post post = new Post(id, title, content, author, timestamp);
+                Post post = new Post(id, title, content, author, timestamp , shortDescription , categorie);
                 postList.add(post);
             }
 

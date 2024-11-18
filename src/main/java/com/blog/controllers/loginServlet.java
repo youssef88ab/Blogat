@@ -43,5 +43,15 @@ public class loginServlet extends HttpServlet
 			response.sendRedirect("login.jsp?error=Invalid credentials");
 		}
 	}
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	{
+		try {
+			response.sendRedirect("login.jsp");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 }

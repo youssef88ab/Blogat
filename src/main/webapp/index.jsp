@@ -32,7 +32,7 @@
             </div>
             <div class="div4">
                 <div class="login-signup">
-                    <a href="<%= request.getContextPath() %>/login" id="login">Login</a>
+                    <a href="login.jsp" id="login">Login</a>
                     <a href="<%= request.getContextPath() %>/signup" id="signup">Sign Up</a>
                 </div>
             </div>
@@ -40,7 +40,7 @@
             <div class="div6">
                 <div class="profile-info">
                     <img src="images/profile-image.jpg" alt="Profile Image" id="profile-image">
-                    <h3 id="username"><%= request.getAttribute("username") != null ? request.getAttribute("username") : "Guest" %></h3>
+                    <h3 id="username">Youssef</h3>
                 </div>
                 <div class="post-info">
                     <p id="date-info"><%= new java.text.SimpleDateFormat("dd MMM yyyy").format(new java.util.Date()) %></p>
@@ -50,9 +50,9 @@
             </div>
             <div class="div7">
                 <div class="left-section">
-                    <a id="hero-category">Destination</a>
-                    <h2 id="hero-title">${posts[0].title}</h2>
-                    <p id="hero-description">Lorem ipsum dolor sit amet consectetur adipisicing elit voluptate pariatur non at maxime.</p>
+                    <a id="hero-category">${posts[5].categorie}</a>
+                    <h2 id="hero-title">${posts[5].title}</h2>
+                    <p id="hero-description">${posts[5].shortDescription}</p>
                 </div>
             </div>
         </div>
@@ -73,6 +73,29 @@
         </div>
 
         <!-- Blog cards -->
+
+<div class="container">
+    <c:forEach var="post" items="${posts}">
+        <div class="card">
+            <div class="card-header">
+                <img src="images/hero.jpg" alt="${post.title}" />
+            </div>
+            <div class="card-body">
+                <span class="tag tag-${post.categorie.toLowerCase()}">${post.categorie}</span>
+                <h4>${post.title}</h4>
+                <p>${post.shortDescription}</p>
+                <div class="user">
+                    <img src="images/profile-image.jpg" alt="user" />
+                    <div class="user-info">
+                        <h5>Youssef</h5>
+                        <small>2h Ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </c:forEach>
+</div>
+        
        
     </section>
 
